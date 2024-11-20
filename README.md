@@ -7,3 +7,4 @@ Once you have ran the game and examined the code, try to extend the Map from a 2
 
 Modify it as you wish and have fun exploring as you think about how you will create your own Text Based Adventure Game. Maybe try adding an NPC or Items to the rooms, that Bryan can find and collect. Try extending a Room to create a locked room. Maybe Bryan can find a key or an access code to unlock the locked room...
 
+Use Draw.io (the VS Code extension) to create a UML Diagram `UML.drawio` for the project to show the relationship between classes for your project.
