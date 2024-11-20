@@ -1,17 +1,6 @@
 public abstract class NamedThing {
     private String name;
-    public String getName() {
-        return name;
-    }
-
-
     private String description;
-
-
-    public String getDescription() {
-        return description;
-    }
-
 
     /**
      * @param n the name 
@@ -20,6 +9,14 @@ public abstract class NamedThing {
     public NamedThing(String n, String d){
         this.name = n;
         this.description = d;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public String toString(){
