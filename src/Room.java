@@ -9,6 +9,7 @@ public class Room extends NamedThing{
     public Room(String n, String d){
         super(n,d);
         this.asciiArt = "";
+        // initialize Items and Entitys
     }
 
     //Make new constructor to create ascii art if desired...

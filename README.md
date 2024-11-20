@@ -1,18 +1,9 @@
-## Getting Started
+# Bryan's Adventure
+Read through the classes and see how they work. This example is a very basic idea just to illustrate how Objects interact in the hierarchy.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+One of the important concepts is how the Map is implemented and how it allows a user to move between different locations. All of the interactions are intentionally blank at this point. Those are decisions that you should make on your project...
 
-## Folder Structure
+Once you have ran the game and examined the code, try to extend the Map from a 2x2 to be a 3x2 or 4x3. Don't spend too much time on the lore, b/c this is a throw away game.
 
-The workspace contains two folders by default, where:
+Modify it as you wish and have fun exploring as you think about how you will create your own Text Based Adventure Game. Maybe try adding an NPC or Items to the rooms, that Bryan can find and collect. Try extending a Room to create a locked room. Maybe Bryan can find a key or an access code to unlock the locked room...
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
