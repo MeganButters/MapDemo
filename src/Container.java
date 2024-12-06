@@ -30,6 +30,7 @@ public class Container extends Room{
     }
 
     public static void addKey(Key k, Container c){
+        int numKeys++;
     }
 
 }
