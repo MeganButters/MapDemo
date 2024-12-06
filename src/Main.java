@@ -89,32 +89,39 @@ public class Main {
             }
             else if (choice.substring(0,1).equalsIgnoreCase("S")){
                 
-                System.out.println("What would you like to search: ");
+                System.out.println("What would you like to search: " + list);
                 // List items in the room availUseable to pickup here..
-                
+                if (p1.getY() == 0 && p1.getX() == 0){
+                    String list = "Servant", "Potted Plant";
+                        if(list.substring(0,1).equalsIgnoreCase("s")){
+                            type.show(npc)
+                }
 
                 detail = input.next();
                 type("Tried to search: \t" + detail);
                 //To be implemented
             }
             else if (choice.substring(0,1).equalsIgnoreCase("T")){
-                if ([p1.getY()][p1.getX()] == [0][0]){
-                    
-                }
-                System.out.println("Who would you like to talk to?");
+                System.out.println("Who would you like to talk to? 1. Servant");
                 // List items in the player's inventory...
 
                 detail = input.next();
                 type("Tried to talk to person: \t" + detail);
                 court.show(npc);
+                
             }
             else if (choice.substring(0,1).equalsIgnoreCase("U")){
-                System.out.println("What would you like to use: ");
+                System.out.println("What would you like to use: 1. Key");
                 // List items in the player's inventory...
 
                 detail = input.next();
-                type("Tried to use the Item: \t" + detail);
+                type("Tried to use the Item: 1. Key" );
                 //To be implemented
+                if (numKeys = 4){
+                    System.out.println("Congrats! You have opened the vault and completed the game.)
+                        }
+                else{
+                    System.out.println("Not enough keys. You need 4 before you can use them to open the vault");
             }
             else if (choice.substring(0,1).equalsIgnoreCase("Q")){
                 type("Goodbye and thanks for playing...Everless Adventure.");
