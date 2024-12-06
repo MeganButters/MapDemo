@@ -1,7 +1,9 @@
 public abstract class Item extends NamedThing{
 
-    public Item(String n, String d){
+    public Item(Room r, String n, String d){
         super(n,d);
+        
     }
+    
     
 }

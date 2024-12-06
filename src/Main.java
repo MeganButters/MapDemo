@@ -4,35 +4,69 @@ public class Main {
     public static void main(String[] args) throws Exception{
 
         // Game Setup Create a Map
-        final int WIDTH=2, HEIGHT=2;
+        final int WIDTH=2, HEIGHT=3;
         Map world = new Map(WIDTH, HEIGHT);
 
         // Create some Rooms
-        Room lvroom = new Room("Living Room", "You enter the heart of the Griffin household. The couch is worn out from years of Peter’s spontaneous naps, and the TV is perpetually tuned to an old episode of The Quagmire Show. Lois is busy in the kitchen, and Stewie's tiny voice can be heard plotting from upstairs. The room is filled with random clutter, including a half-eaten sandwich, a soda can, and a magazine featuring Peter's latest misadventure. The fireplace flickers lazily in the corner, but something seems off — there’s a suspiciously large stack of comics behind the couch");        
-        Room clam = new Room("The Clam", "The familiar, dimly lit pub where Peter, Quagmire, Cleveland, and Joe meet up to drink and talk about their wild, inappropriate adventures. The jukebox hums softly in the background, and you can hear the clinking of glass bottles as the bartender, Jerome, serves drinks. A dartboard hangs on the far wall, but it’s completely covered in broken darts from Peter’s latest attempt at playing. There's a faint smell of stale peanuts in the air, and the smell of fried food wafts from the kitchen. A mysterious figure sits in the corner booth, quietly sipping a drink. It’s none other than Tom Tucker — but what’s he doing here?");
-        Room loisRoom = new Room("Lois' Craft Room","Lois’ haven of creativity is a treasure trove of yarn, fabric, paints, and all things DIY. The room is neatly organized, though there are scattered projects half-finished on every surface. In the corner, a sewing machine hums away as Lois is working on yet another home decor item for the house. There's a faint smell of lavender in the air, and the shelves are filled with carefully arranged arts and crafts supplies. If you’re lucky, you might even catch a glimpse of Brian, who has been roped into helping her with some ‘artsy’ task. But be warned — don’t touch anything unless you’re ready to explain yourself.");
-        Room den = new Room("The Stewie's Secret Den", "You enter a hidden room under the Griffin house, filled with high-tech gadgets and glowing screens. The walls are lined with blueprints of diabolical inventions, and a hologram of Stewie is floating in the center of the room, acting out a dramatic speech about world domination. It’s clear that Stewie has been busy with his latest experiments, as a few robots roam the floor, occasionally malfunctioning. There’s a small compartment in the corner labeled “Do Not Touch,” but you can’t resist. Could it be the key to his latest scheme? Stewie’s not far behind, though, and he’s not known for his patience.");
+        Room vault = new Room("The Vaults", ".");        
+        Room throne = new Room("The Throne Room", "Welcome to the Throne Room. The walls loom over you as you walk down the intricate rug that leads up to the King's throne. The room has not been used since the King's death, but this is the Queen's favorite room.\nRecently, she refurnished the room to her, like adding a large grand piano. Maybe she hid a key... look around and find out.");
+        Room bedroom = new Room("The Queen's Bedchamber","Welcome to the Queen's Bedchamber. There lies a large, canopied bed in the center of the room. The golden chest at the front immediatley cathces your attention. The details and carvings reflect the sunlight coming from the large floor-to-wall windows that push out onto the balcony.\nNo one, not even servants or guards, are allowed in here. There must be a reason for that... maybe the reason is a key?");
+        Room court = new Room("The Courtyard", "Welcome to the Courtyard. The Courtyard is located within the palace walls, connecting to multiple rooms. This area serves as a gathering spot for many servants, but is closely watched by guards.\nSo be careful of catching the guard's attention, but a servant might know something about the keys.");
+        Room kitchen = new Room("The Kitchen", "Welcome to the Kitchen. The chefs are the best in all of Everless. One chef is even a friend of the Queen, but stay away from him. He is a loyal supporter of the Queen and would never betray her trust. Look around and see if the Queen might have hid a key here in the confidence of the chef.");
+        Room hall = new Room("The Great Hall", "Welcome to the Great Hall. The Great Hall has held many monarchs and kings over the centuries. However, the Great Hall has not seen any outsiders in years since the Queen decided to close the palace walls in an effort to protect her time.\nThe King, as one of his last acts before death, hid one of the keys to the vault rumored to be in this very hall. Rumors are not always true, but this one might be.");
         
         // Add the Rooms to the Map
-        world.addRoom(lvroom, 0, 0);
-        world.addRoom(clam, 0, 1);
-        world.addRoom(loisRoom, 1, 0);
-        world.addRoom(den, 1, 1);
-    
+        world.addRoom(court, 0, 0);
+        world.addRoom(throne, 0, 1);
+        world.addRoom(bedroom, 0, 2);
+        world.addRoom(vault, 1, 2);
+        world.addRoom(kitchen, 1, 1);
+        world.addRoom(hall, 1, 0);
+        
+        // create containers
+        Container piano = new Container("Grand Piano", "This piano has been recently added by the Queen due to her love for music. Let's have a look inside to see if she hid anything in here.");
+        Container plant = new Container("Potted Plant", "No key! Plants may be a classic hiding spot, but not for the Queen. You'll have to search a bit harder than that.");
+        Container painting = new Container("The King's Portrait", "The painting is surrounded by an ornate gold frame that seems to have gone years without being touched due to the dust residing along the edges. Search around and maybe you'll find something.");
+        Container cabinets = new Container("Kitchen Cabinets", "The cabinets store the Queen's favorite snacks and often visits the kitchen to be with her friend, the chef. Maybe she hid a key somewhere.");
+        Container chest = new Container("The Queen's Chest", "The chest holds many of the Queen's trinkets from journals to her crown. There's a lot to sort through, but rummage around and see if you can find a key.");
+
+        // add containers to rooms
+        Room.addContainer(piano, hall);
+        Room.addContainer(plant, court);
+        Room.addContainer(painting, throne);
+        Room.addContainer(cabinets, kitchen);
+        Room.addContainer(chest, bedroom);
+
+        // create keys
+        Key k1 = new Key("A key!", "Congrats! You foundd a key! Keep looking for the others but if you have found all 4 then go open the vault.");
+        Key k2 = new Key("A key!", "Congrats! You foundd a key! Keep looking for the others but if you have found all 4 then go open the vault.");
+        Key k3 = new Key("A key!", "Congrats! You foundd a key! Keep looking for the others but if you have found all 4 then go open the vault.");
+        Key k4 = new Key("A key!", "Congrats! You foundd a key! Keep looking for the others but if you have found all 4 then go open the vault.");
+        
+        // add keys to containers
+        Container.addKey(k1, piano);
+        Container.addKey(k2, painting);
+        Container.addKey(k3, cabinets);
+        Container.addKey(k4, chest);
+
         // Basic input stuff
         Scanner input = new Scanner(System.in);
         String choice = "   ";
         String detail = "";
 
+
         // Create a Player
-        Player p1 = new Player("Bryan", "You’re a pretty unique guy—well, dog, but you know what I mean. You’re a talking white Labrador with a black nose and those sharp, intelligent eyes. You’ve got this sophisticated, almost pretentious vibe to you, but you pull it off, no question. You’ve got a bit of a sarcastic, dry humor that keeps people on their toes, and you don’t mind giving a little bit of tough love to those around you.");
-        
+        Player p1 = new Player("Jules", "You are an oppressed peasant of the Everless Kingdom who struggling to support your family and time is running out.\nIn this world, time is money, and the Queen has stolen her people's time for herself. The kingdom needs someone who to take on the mission of retrieving the key hidden in the palace that will access the vaults the Queen has stored the stolen time.\nThe people have decided you are that person. Be quick and find the key before your time runs out.\nGood luck.");
+        Player npc = new Player("Servant", "Hello. My name is Amma. As a servant within in the castle, I hear many secrets. One might be of help to you. You won't find any keys in the courtyard, there are too many people here for the Queen's liking. But you can find a key in the Queen's chambers. But beware, she " );
+        Room.addPlayer(npc);
+
+
         // Game Loop
-        type("Welcome to Bryan's Adventure.");
-        type("You are " + p1);
-        type(world.show(p1));
-        while(!(choice.substring(0,1).equalsIgnoreCase("q"))){
-            type("Enter a command [Move, Look, Quit, Pickup, Help, Talk, Use]: ");
+        type("Welcome to Everless Adventure.");
+        type("You are " + p1); // character description
+        type(world.show(p1)); // You are in the ---. The ---- is ....
+        while(!(choice.substring(0,1).equalsIgnoreCase("Q"))){
+            type("Enter a command [Move, Search, Pickup, Help, Talk, Use, Quit]: ");
             choice = input.next();
             
             if (choice.substring(0,1).equalsIgnoreCase("M")){
@@ -42,7 +76,8 @@ public class Main {
                 // p1.move(dir, world);
                 if(p1.move(dir, world)){
                     System.out.println("You moved " + detail);
-                    type(world.show(p1)); // Show the new Room Description
+                    type(world.show(p1));
+                    
                 }
                 else{
                     System.out.println("Couldn't move " + detail);
@@ -52,12 +87,26 @@ public class Main {
             else if (choice.substring(0,1).equalsIgnoreCase("H")){
                 help();
             }
-            else if (choice.substring(0,1).equalsIgnoreCase("P")){
-                System.out.println("What would you like to pickup: ");
+            else if (choice.substring(0,1).equalsIgnoreCase("S")){
+                
+                System.out.println("What would you like to search: ");
                 // List items in the room availUseable to pickup here..
+                
+
                 detail = input.next();
-                type("Tried to pickup the Item: \t" + detail);
+                type("Tried to search: \t" + detail);
                 //To be implemented
+            }
+            else if (choice.substring(0,1).equalsIgnoreCase("T")){
+                if ([p1.getY()][p1.getX()] == [0][0]){
+                    
+                }
+                System.out.println("Who would you like to talk to?");
+                // List items in the player's inventory...
+
+                detail = input.next();
+                type("Tried to talk to person: \t" + detail);
+                court.show(npc);
             }
             else if (choice.substring(0,1).equalsIgnoreCase("U")){
                 System.out.println("What would you like to use: ");
@@ -67,14 +116,19 @@ public class Main {
                 type("Tried to use the Item: \t" + detail);
                 //To be implemented
             }
+            else if (choice.substring(0,1).equalsIgnoreCase("Q")){
+                type("Goodbye and thanks for playing...Everless Adventure.");
+                input.close();
+            }
+
             else{
                 type("Invalid command");
             }
 
 
         }
-        type("Goodbye and thanks for playing...Bryan's Adventure.");
-        input.close();
+        // type("Goodbye and thanks for playing...Everless Adventure.");
+        // input.close();
         
     }
 

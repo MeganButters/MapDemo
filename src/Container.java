@@ -1,16 +1,20 @@
 import java.util.ArrayList;
-public class Room extends NamedThing{
+public class Container extends Room{
 
     ArrayList<Item> items;
     ArrayList<Entity> characters;
     String asciiArt;
 
     
-    public Room(String n, String d){
+    public Container(String n, String d){
         super(n,d);
         this.asciiArt = "";
         // initialize Items and Entitys
     }
+
+    // public void addKey(){
+    //     System.out.println("Congrats! You found a key. Keep lookig for the others, or open the vault if you have four.");
+    // }
   
 
     //Make new constructor to create ascii art if desired...
@@ -18,24 +22,14 @@ public class Room extends NamedThing{
     // Method to display Items and/or Entitys in room...
 
     //Methods to add/remove Items/Entitys...
-    public static void addContainer(Container n, Room r){
-    }
 
-    
 
     public String toString(){
         String s = asciiArt + "\n\n";
         return s + super.toString();
     }
 
-
-    public boolean IgnoreCaseEquals(String string) {
-        return false;
-    }
-
-
-    public Player show(Player npc) {
-        return npc;
+    public static void addKey(Key k, Container c){
     }
 
 }

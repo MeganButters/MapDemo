@@ -41,5 +41,6 @@ public class Player extends Entity {
     public int getY(){
         return yPos;
     }
+ 
 
 }

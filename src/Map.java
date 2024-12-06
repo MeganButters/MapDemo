@@ -23,7 +23,6 @@ public class Map {
             throw new IllegalStateException();
         }
 
-    }
 
     public String show(Player p){
         return map[p.getY()][p.getX()].toString();

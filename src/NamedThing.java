@@ -10,7 +10,7 @@ public abstract class NamedThing {
         this.name = n;
         this.description = d;
     }
-
+    
     public String getName() {
         return name;
     }
@@ -25,5 +25,7 @@ public abstract class NamedThing {
         return s;
     }
 
+    public static void addPlayer(Player n){
+    }
     
 }
