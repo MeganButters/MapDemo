@@ -58,7 +58,7 @@ public class Main {
         // Create a Player
         Player p1 = new Player("Jules", "You are an oppressed peasant of the Everless Kingdom who struggling to support your family and time is running out.\nIn this world, time is money, and the Queen has stolen her people's time for herself. The kingdom needs someone who to take on the mission of retrieving the key hidden in the palace that will access the vaults the Queen has stored the stolen time.\nThe people have decided you are that person. Be quick and find the key before your time runs out.\nGood luck.");
         Player npc = new Player("Servant", "Hello. My name is Amma. As a servant within in the castle, I hear many secrets. One might be of help to you. You won't find any keys in the courtyard, there are too many people here for the Queen's liking. But you can find a key in the Queen's chambers. But beware, she " );
-        Room.addPlayer(npc);
+        Room.addPlayer(npc, court);
 
 
         // Game Loop
