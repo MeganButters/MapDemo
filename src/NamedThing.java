@@ -25,7 +25,7 @@ public abstract class NamedThing {
         return s;
     }
 
-    public static void addPlayer(Player n){
+    public static void addPlayer(Player n, Room r){
     }
     
 }
