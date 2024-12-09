@@ -29,8 +29,4 @@ public class Container extends Room{
         return s + super.toString();
     }
 
-    public static void addKey(Key k, Container c){
-        int numKeys++;
-    }
-
 }
