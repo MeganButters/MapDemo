@@ -1,10 +1,6 @@
-# Bryan's Adventure
-Read through the classes and see how they work. This example is a very basic idea just to illustrate how Objects interact in the hierarchy.
+# Everless Adventures
+Everless Adventures is based on the character Jules, a peasant within the Everless Kingdom. The King recently died, and the Queen came into power. Instead of ruling fairly, the kingdom fell into despair under her rule. In a world where time is money, the Queen has stolen the people's time to avoid meeting the same fate as the late-king. 
 
-One of the important concepts is how the Map is implemented and how it allows a user to move between different locations. All of the interactions are intentionally blank at this point. Those are decisions that you should make on your project...
+You, Jules, have been chosen by the people to sneak into the castle and return everyone's time. But it's a bit more complicated than that. First, you must find the four keys needed to open the vault, and you must do this without being caught by the Queen.
 
-Once you have ran the game and examined the code, try to extend the Map from a 2x2 to be a 3x2 or 4x3. Don't spend too much time on the lore, b/c this is a throw away game.
-
-Modify it as you wish and have fun exploring as you think about how you will create your own Text Based Adventure Game. Maybe try adding an NPC or Items to the rooms, that Bryan can find and collect. Try extending a Room to create a locked room. Maybe Bryan can find a key or an access code to unlock the locked room...
-
-Use Draw.io (the VS Code extension) to create a UML Diagram `UML.drawio` for the project to show the relationship between classes for your project.
+Be quick before time runs out for both you and your family. Good Luck.
