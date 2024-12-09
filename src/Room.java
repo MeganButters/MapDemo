@@ -34,7 +34,8 @@ public class Room extends NamedThing{
     }
 
 
-    public Player addPlayer(Player p, Room r) {
+    public Player show(Player p) {
+        return p;
     }
 
 }
