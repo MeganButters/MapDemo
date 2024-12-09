@@ -23,7 +23,10 @@ public class Container extends Room{
 
     //Methods to add/remove Items/Entitys...
 
-
+    public String toString(){
+        String s = asciiArt + "\n\n";
+        return s + super.toString();
+    }
   
     
 
